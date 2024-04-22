@@ -1,0 +1,46 @@
+i 4 punti principali di apache nifi:
+1) Volume: La quantita di dati puo crescere esoponenzialemnte ogni anno , potremmo dire che se abbiamo grandi quantita di dati puo essere una sfida con 
+organizzazione, riguardo l'integrazione,immagazzinamento,lavorazione e gestione delle informazioni, A volte questa è la piu grande sfida.
+Immagina i dati attraverso 15 anni, un anno oggi viene prodotto in pochi giorni.
+Nello scenario dei bigData, le informazioni vengono spesso mantenute nella loro forma grezza senza applicare nessuna transofrmazione,
+questo ci consente di essere flessibili riguardo i processi imminenti e capaci di ricomputare i differenti stati nel corso del tempo,
+se questo diventi necessario un giorno.
+I sistemi tradizionali non sono in grado di far fonte con alti carichi di lavoro, per questo abbiamo un aumento dei sistemi 
+distribuiti, il lavoro viene distribuito tra macchine multiple i cosidetti shared-nothing architectures. 
+Ci sono nodi che non condividono memoria o disco, perchè l'intento e quello di eliminare la contesa tra ogni nodo che eseguono 
+la propia porzione di lavoro, ulteriormente, esso elimina singloli punti di fallimneto e aumenta la facilita della scalabilità, 
+aggiungendo nuovi nodi. 
+Non abbiamo mensionato l'alta disponiblità attraverso la replica dei dati.
+La persistenza dell'immagazinamento, le informazioni sui big data sono per lo più conosciute come data lake.
+In contrasto con le tradizionali dati magazzino.
+Questo è il posto deove tipicamente tutti i dati vengono organizzati è immagazinato come predentemente mezionato in forma grezza,
+indipendente dalla struttura, formato e schema.
+Ai giorni di oggi i data warehouse(magazzini di dati) vengono integrati da data lakes o sono totalmente sostituiti. 
+Tuttavia, questo dipende molto dal caso di uso. 
+
+
+2) Velocità : la velocità è la caratteristica che si riferisce al rateo di quanto velocemente i dati è in arrivo.
+Negli scenari ig data, in genere vengono gestiti flussi di dati e eventi continui, ma non solo riguardo questo ma anche il rateo di cambiamenti 
+e combinazione dei dataset che arrivano a velicità differenti. 
+Questo è stato spesso dimenticato parlando delle sue caratteristiche. 
+Per le instanze, da fusione e analisi stream di dati in arrivo da macchine in tempo reale, insieme di dati batch provenienti 
+da una applicazione business su internet, deve esserci un modo per fornire questi dati insieme per l'analisi senza fare 
+differenze sul lato utente. C'e un ulteriore vantaggio nell'avere funzionalita di coda o buffering in atto in caso
+di un qualsisasi sistema a valle non funzioni correttamente.
+Ovviamente, la velocita si riferisce al tempo di processare e quanto i dati hanno bisogno per essere pronti per le analisi.
+In molti casi, è necessario intraprendere azioni in tempo reale, altrimenti non avrebbero alcun effetto. 
+
+
+3) varietà: Oltre al volume dei dati e alla sfida di velocita, è necessario tenere conto della varieta e delle fonti dei dati.
+Specialmente negli ultimi anni, sempre piu informazioni vengono digitalizzate.
+Fattorie,città,auto,macchine,persone e cosi via, stanno diventanto sempre piu connessi. 
+Ovviamente tutti questo differenti fonti di dati non condividono la stessa struttura.
+E' necessario gestire le informazioni a partire da dati strutturati e non strutturati, parlando in termini di fonti di dati 
+questo significherebbe oltre al database con file xml,json,audio o video.
+Ci sono differenti tipi di dati e schemi da gestire, che potrebbero cambiare col tempo. 
+
+4) veridicità: L'ultima sfida l'organizzazione ha dovuto affrontare lavodando con i big data è noto come veritierità.
+Questo è tutto riguardo l'affidabilità di dati e la provenziena dei dati.
+Esso riguarda non solo l'origine dei dati, ma anche dove gli step di lavorazione sono ripetuti correttamenti per non distorcere alcun infrazmione.
+In ordine per sfruttare i dati e mantenerne il valore, è in oltre necessario condurre una corretta gestione dei dati implementando
+ad esempio  
